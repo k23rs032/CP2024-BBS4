@@ -57,7 +57,8 @@ function updateCharacterCount(inputId, counterId, maxLength) {
     
     input.on('input', () => {
         const length = input.val().length;
-        counter.text(`${length}/${maxLength}`);
+        const a = 1000-(`${length}`);
+        counter.text(`残り${a}文字`);
     
         if (length > maxLength) {
             counter.addClass('error');
@@ -562,7 +563,7 @@ window.addEventListener('unload', function() {
 
         <!-- 投稿一覧 -->
         <div class="posts-container">
-            <h2>投稿一覧</h2>
+            <h2>【投稿一覧】</h2>
             <div class="posts-control">
                 <select id="sortOrder" class="form-control">
                     <option value="newest">新しい順</option>
